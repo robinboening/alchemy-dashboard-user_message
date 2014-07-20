@@ -1,0 +1,17 @@
+<div class="widget">
+  <h2><%= _t(:label, scope: "dashboard.widgets.#{@widget.name}") %></h2>
+  <table>
+  <% if @notices.blank? %>
+    <tr class="even">
+      <td><%= _t('no_user_notifications') %></td>
+    </tr>
+  <% else %>
+    <% @notices.each do |notice| %>
+    <tr class="<%= cycle('even', 'odd') %>">
+      <td><%= notice.subject %></td>
+      <td><small><%= notice.user.name %></small></td>
+    </tr>
+    <% end %>
+  <% end %>
+  </table>
+</div>

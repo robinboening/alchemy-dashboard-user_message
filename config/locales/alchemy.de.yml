@@ -1,0 +1,9 @@
+# encoding: UTF-8
+de:
+  alchemy:
+    no_user_notifications: Keine Nachrichten
+
+    dashboard:
+      widgets:
+        user_notice:
+          label: Nachrichten von Usern
